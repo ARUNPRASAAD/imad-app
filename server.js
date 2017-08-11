@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-        articleOne :{
+        'articleone' :{
         title : `arun-one`,
         content :`<table>
             <tr>
@@ -21,7 +21,7 @@ var articles={
         </table>`
             
         },
-        articleTwo :{
+        'articletwo' :{
         title : `arun-two`,
         content :`<table>
             <tr>
@@ -36,7 +36,7 @@ var articles={
         </table>`
             
         },
-        articleThree :{
+        'articleThree' :{
         title : `arun-three`,
         content :`<table>
             <tr>
@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function(req,res) {
-    res.send(myfunction(articles[articleName]));
+    res.send(myfunction(articles[articleTwo]));
 });
 
 app.get('/ui/style.css', function (req, res) {
