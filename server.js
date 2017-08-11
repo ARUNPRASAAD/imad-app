@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleOne ={
-
+title : `arun-one`,
 content :`<table>
     <tr>
         <td>
@@ -21,11 +21,13 @@ content :`<table>
     
 };
 function myfunction(data){
+    var title= data.title;
     var content= data.content;
 var htmltemplate=`
 <!doctype html>
     <html>
         <head>
+        ${title}
             <style>
                 table{
                    border:1px solid red;
