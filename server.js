@@ -5,12 +5,43 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne ={
+
+content :`<table>
+    <tr>
+        <td>
+            my first table
+        </td>
+        <td>
+           my second table
+        </td>
+    </tr>
+
+</table>`
+    
+};
+function myfunction(data){
+    var content= data.content;
+var htmltemplate=`
+<!doctype html>
+    <html>
+        <head>
+        </head>
+            <body>
+            ${content}
+            </body>
+    </html>
+
+
+`;
+return myfunction;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function(req,res) {
-    res.send("test1");
+    res.send(myfunction(data));
 });
 
 app.get('/ui/style.css', function (req, res) {
