@@ -85,7 +85,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res) {
-    res.send(myfunction(articles[article]));
+    res.send(myfunction(articles[1]));
 });
 
 app.get('/ui/style.css', function (req, res) {
