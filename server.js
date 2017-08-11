@@ -27,7 +27,9 @@ var htmltemplate=`
 <!doctype html>
     <html>
         <head>
-            <title>${title}</title>
+            <title>
+            ${title}
+            </title>
             <style>
                 table{
                    border:1px solid red;
