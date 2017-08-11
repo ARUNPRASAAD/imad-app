@@ -5,46 +5,79 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne ={
-title : `arun-one`,
-content :`<table>
-    <tr>
-        <td>
-            my first table
-        </td>
-        <td>
-           my second table
-        </td>
-    </tr>
-
-</table>`
+var articles={
+        articleOne :{
+        title : `arun-one`,
+        content :`<table>
+            <tr>
+                <td>
+                    my first table
+                </td>
+                <td>
+                   my second table
+                </td>
+            </tr>
+        
+        </table>`
+            
+        },
+        articleTwo :{
+        title : `arun-two`,
+        content :`<table>
+            <tr>
+                <td>
+                    my two first table
+                </td>
+                <td>
+                   my two second table
+                </td>
+            </tr>
+        
+        </table>`
+            
+        },
+        articleThree :{
+        title : `arun-three`,
+        content :`<table>
+            <tr>
+                <td>
+                    my three first table
+                </td>
+                <td>
+                   my three second table
+                </td>
+            </tr>
+        
+        </table>`
+            
+        }
     
 };
 function myfunction(data){
-    var title= data.title;
-    var content= data.content;
-var htmltemplate=`
-<!doctype html>
-    <html>
-        <head>
-            <title>
-            ${title}
-            </title>
-            <style>
-                table{
-                   border:1px solid red;
-                   
-                    
-                }
-            </style>
-        </head>
-            <body>
-            ${content}
-            </body>
-    </html>
-
-
-`;
+        var title= data.title;
+        var content= data.content;
+        var htmltemplate=`
+        <!doctype html>
+            <html>
+                <head>
+                    <title>
+                    ${title}
+                    </title>
+                    <style>
+                        table{
+                           border:1px solid red;
+                           
+                            
+                        }
+                    </style>
+                </head>
+                    <body>
+                    ${content}
+                    </body>
+            </html>
+        
+        
+        `;
 return htmltemplate;
 }
 app.get('/', function (req, res) {
@@ -52,7 +85,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res) {
-    res.send(myfunction(articleOne));
+    res.send(myfunction(articles));
 });
 
 app.get('/ui/style.css', function (req, res) {
