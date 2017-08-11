@@ -84,9 +84,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res) {
-   // var articleName= req.params.articleName;
-   var articleName='article-one';
+app.get('/:articleName', function(req,res) {
+    var articleName= req.params.articleName;
+  // var articleName='article-one';
     res.send(myfunction(articles[articleName]));
 });
 
