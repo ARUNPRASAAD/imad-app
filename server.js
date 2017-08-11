@@ -26,6 +26,13 @@ var htmltemplate=`
 <!doctype html>
     <html>
         <head>
+            <style>
+                table{
+                   border:1px solid red;
+                   
+                    
+                }
+            </style>
         </head>
             <body>
             ${content}
