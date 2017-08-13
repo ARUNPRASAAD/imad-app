@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+      
+        <br>
+        <div class="center text-big bold">
+          Counter Page
+        <hr>
+        </div>
+        <script type="text/javascript" src="ui/main.js">
+        </script>
+    </body>
+</html>
