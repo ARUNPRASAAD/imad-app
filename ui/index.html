@@ -22,13 +22,18 @@
               var xhttp = new XMLHttpRequest();
               alert("test");
     xhttp.onreadystatechange==function(){
-        if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) {
+         alert("test1");
+        if (xhttp.readyState === XMLHttpRequest.DONE) {
+             alert("test2");
+            if(xhttp.status === 200){
+                 alert("test3");
              
                          var counter=xhttp.responseText;
 alert(counter);
               var counte=document.getElementById("count");
 
               counte.innerHTML=counter.toString();
+            }
        }
     }
     xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/counter",true);
