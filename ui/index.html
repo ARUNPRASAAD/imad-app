@@ -20,17 +20,12 @@
 
               
               var xhttp = new XMLHttpRequest();
-              alert("test");
     xhttp.onreadystatechange=function(){
-         alert("test1");
        // if (xhttp.readyState === XML.HttpRequest.DONE) {
-             alert("test2");
            // if(xhttp.status === 200){
            if (this.readyState == 4 && this.status == 200){
-                 alert("test3");
-             
+
                          var counter=xhttp.responseText;
-alert(counter);
               var counte=document.getElementById("count");
 
               counte.innerHTML=counter.toString();
