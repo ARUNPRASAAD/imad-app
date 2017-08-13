@@ -4,19 +4,9 @@
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
-        <div class="center">
-            <img src="http://www.executor.890m.com/edited.jpg" class="img-medium"/>
-        </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! This is Arun!
-        <hr>
-            <button>click it</button>to increase the counter<span id="count"></span>
-        </div>
-        <script type="text/javascript" src="ui/main.js">
-        </script>
         <script>
             var counter=0;
+            button= document.getElementById("but_ton");
             button.onclick(function(){
                 
                 alert("function created successfully");
@@ -24,5 +14,17 @@
             });
             
         </script>
+        <div class="center">
+            <img src="http://www.executor.890m.com/edited.jpg" class="img-medium"/>
+        </div>
+        <br>
+        <div class="center text-big bold">
+            Hi! This is Arun!
+        <hr>
+            <button id="but_ton">click it</button>to increase the counter<span id="count"></span>
+        </div>
+        <script type="text/javascript" src="ui/main.js">
+        </script>
+        
     </body>
 </html>
