@@ -29,7 +29,8 @@
             document.getElementById("demo").innerHTML =xhttp.responseText;
        }
     }
-    xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/counter");
+    xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/counter",true);
+    xhttp.send(null);
      
 };
               
