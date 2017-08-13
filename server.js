@@ -5,6 +5,14 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+ //var counter=0;
+app.get('/counter', function(req,res){
+   
+   // counter=counter+1;
+    res.send(test);
+    
+});
+
 var articles={
         'article-one' :{
         title : 'arun-one',
@@ -89,13 +97,7 @@ app.get('/:articleName', function(req,res) {
   // var articleName='article-one';
     res.send(myfunction(articles[articleName]));
 });
- //var counter=0;
-app.get('/counter', function(req,res){
-   
-   // counter=counter+1;
-    res.send(test);
-    
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
