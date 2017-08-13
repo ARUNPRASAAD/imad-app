@@ -21,9 +21,9 @@
               
               var xhttp = new XMLHttpRequest();
               alert("test");
-    xhttp.onreadystatechange==function(){
+    xhttp.onreadystatechange=function(){
          alert("test1");
-        if (xhttp.readyState == true) {
+        if (xhttp.readyState == XML.HttpRequest.DONE) {
              alert("test2");
             if(xhttp.status === 200){
                  alert("test3");
