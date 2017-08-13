@@ -89,8 +89,9 @@ app.get('/:articleName', function(req,res) {
   // var articleName='article-one';
     res.send(myfunction(articles[articleName]));
 });
+ var counter=0;
 app.get('/counter', function(req,res){
-    var counter=0;
+   
     counter=counter+1;
     res.send(test);
     
