@@ -15,12 +15,13 @@
             <button id="but">click it</button>to increase the counter<span id="count"></span>
         </div>
          <script>
-           // var counter=0;
+            var counter=0;
             var button= document.getElementById("but");
-            alert("test");
+            var counte=document.getElementById("count");
             button.onclick = function(){
-              alert("test");  
-                alert("function created successfully");
+              counter=counter+1;
+              counte.innerHTML(counter);
+              
                 
             };
             
