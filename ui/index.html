@@ -15,18 +15,20 @@
             <button id="but">click it</button><label>to increase the counter<span id="count">0</span><span id="demo"></span></label>
         </div>
          <script>
-            var counter=0;
             var button= document.getElementById("but");
             button.onclick = function(){
               counter=counter+1;
-                          var counte=document.getElementById("count");
-
-              counte.innerHTML=counter.toString();
+                        
               
               var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange==function(){
         if (xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200) {
-            document.getElementById("demo").innerHTML =xhttp.responseText;
+             
+                         var counter=xhttp.responseText;
+
+              var counte=document.getElementById("count");
+
+              counte.innerHTML=counter.toString();
        }
     }
     xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/counter",true);
