@@ -31,12 +31,22 @@
             var box=document.getElementById("txtvalue");
             var submit= document.getElementById("submitid");
             submit.onclick= function(){
-                //alert(box.value);
-                var arun=[];
-               // var names=['name1','name2','name3'];
+               
+                 var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange=function(){
+      
+                if (this.readyState == 4 && this.status == 200){
+                            var arun=[];
+                         var arun=xhttp.responseText;
+                         
+
+                         counte.innerHTML=counter.toString();
+                         
+                      
+               
                 var b=box.value;
                 arun.push(b);
-               // alert(arun);
+             
                 var list='';
                 for(var i=0;i<arun.length;i++){
                list += '<li>'+arun[i]+'</li>';
@@ -44,6 +54,13 @@
                 }
                 var ui=document.getElementById("uivalue");
                 ui.innerHTML=list;
+                     }
+          xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/submit?names="+b,true);
+    xhttp.send(null);
+                      }
+  
+     
+              
             };
             
         </script>
