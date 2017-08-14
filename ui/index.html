@@ -33,12 +33,14 @@
             submit.onclick= function(){
                 alert(box.value);
                 var arun=[];
+                var names=['name1','name2','name3'];
                 var b=box.value;
                 arun.push(b);
                 alert(arun);
                 var list='';
-                for(var i=0;i<arun.length;i++){
-                list += '<li>'+arun[i]+'</li>';
+                for(var i=0;i<names.length;i++){
+               // list += '<li>'+arun[i]+'</li>';
+                list += '<li>'+names[i]+'</li>';
                 }
                 var ui=document.getElementById("uivalue");
                 ui.innerHTML=list;
