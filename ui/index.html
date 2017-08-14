@@ -28,14 +28,14 @@
         <script type="text/javascript" src="ui/main.js">
         </script>
         <script>
-            var box=document.getElementById("txtvalue").value;
+            var box=document.getElementById("txtvalue");
             var submit= document.getElementById("submitid");
             submit.onclick= function(){
-                alert(box);
+                alert(box.value);
                 var arun=[];
-                arun.push(box);
+                arun.push(box.value);
                 for(var i=0;i<arun.length;i++){
-                var list= '<li>'+box+'</li>';
+                var list= '<li>'+box.value+'</li>';
                 }
                 var ui=document.getElementById("uivalue");
                 ui.innerHTML=list;
