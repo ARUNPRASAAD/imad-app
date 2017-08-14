@@ -55,9 +55,11 @@
                 var ui=document.getElementById("uivalue");
                 ui.innerHTML=list;
                      }
-             xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/submit?names="+b,true);
-             xhttp.send(null);
+             
                       }
+                      var box1=box.value;
+                      xhttp.open("GET", "http://arunprasaadc.imad.hasura-app.io/submit?names="+box1,true);
+             xhttp.send(null);
   
      
               
