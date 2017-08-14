@@ -28,13 +28,13 @@
         <script type="text/javascript" src="ui/main.js">
         </script>
         <script>
-            var box=document.getElementById("txtvalue");
+            
             var submit= document.getElementById("submitid");
             submit.onclick= function(){
                
                  var xhttp = new XMLHttpRequest();
               xhttp.onreadystatechange=function(){
-      
+      var box=document.getElementById("txtvalue");
                 if (this.readyState == 4 && this.status == 200){
                             var arun=[];
                          var arun=xhttp.responseText;
