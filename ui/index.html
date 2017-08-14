@@ -28,11 +28,15 @@
         <script type="text/javascript" src="ui/main.js">
         </script>
         <script>
-            var box=document.getElementById("txtvalue");
+            var box=document.getElementById("txtvalue").value;
             var submit= document.getElementById("submitid");
             submit.onclick= function(){
-                alert(box.value);
-                var list= '<li>'+box.value+'</li>';
+                alert(box);
+                var arun=[];
+                arun.push(box);
+                for(int i=0;i<arun.length;i++){
+                var list= '<li>'+box+'</li>';
+                }
                 var ui=document.getElementById("uivalue");
                 ui.innerHTML=list;
             };
