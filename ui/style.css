@@ -27,11 +27,9 @@ button{
 }
 label{
     font-size:10px;
-    
-}
-hr{
     padding:0px;
 }
+
 .container{
     background-color:white;
     width:100%;
