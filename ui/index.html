@@ -29,42 +29,7 @@
         </script>
         <script>
             
-            var submit= document.getElementById("submitid");
-            submit.onclick= function(){
-              var box=document.getElementById("txtvalue"); 
-                 var xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange=function(){
-      
-                if (this.readyState == 4 && this.status == 200){
-                            var arun=[];
-                         var arun=xhttp.responseText;
-                         
-
-                        
-                         
-                      
-               
-                var b=box.value;
-                arun=JSON.parse(arun);
-             
-                var list='';
-                for(var i=0;i<arun.length;i++){
-               list += '<li>'+arun[i]+'</li>';
-               // list += '<li>'+names[i]+'</li>';
-                }
-                var ui=document.getElementById("uivalue");
-                ui.innerHTML=list;
-                     }
-             
-                      }
-                      var box1=document.getElementById("txtvalue").value;
-                      
-                      xhttp.open('GET', 'http://arunprasaadc.imad.hasura-app.io/submit?name=' + box1,true);
-             xhttp.send(null);
-  
-     
-              
-            };
+            
             
         </script>
         
