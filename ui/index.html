@@ -31,8 +31,10 @@
             var box=document.getElementById("txtvalue");
             var submit= document.getElementById("submitid");
             submit.onclick= function(){
-                alert("function created successfully");
-                
+                alert(box.value);
+                var list= '<li>'+box.value+'</li>';
+                var ui=document.getElementById("uivalue");
+                ui.innerHTML=list;
             };
             
         </script>
