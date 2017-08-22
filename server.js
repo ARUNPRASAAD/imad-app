@@ -5,7 +5,7 @@ var Pool= require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
-/*var config={
+var config={
     user: 'arunprasaadc',
   host: 'db.imad.hasura-app.io',
   port: '5432',
@@ -20,7 +20,7 @@ app('/user', function(req,res){
         if(err){
            res.status(500).send(err.toString());
         }else{
-            res.send(JSON.stringify(result.row));
+            res.send(JSON.stringify(results.row));
         }
         
         
@@ -28,7 +28,7 @@ app('/user', function(req,res){
     
     
     
-});*/
+});
 
  var counter=0;
 app.get('/counter', function(req,res){
