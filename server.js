@@ -14,7 +14,13 @@ var config={
  password:'db-arunprasaadc-94273'
 };
 
-
+var pool=new Pool(config);
+app('/user', function(req,res){
+  
+    
+    
+    
+});
 
  var counter=0;
 app.get('/counter', function(req,res){
