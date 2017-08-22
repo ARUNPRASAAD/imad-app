@@ -14,7 +14,7 @@ var config={
  password:'db-arunprasaadc-94273'
 };
 
-var Pool=new Pool(config);
+var pool=new Pool(config);
 app('/user', function(req,res){
     pool.query('select * from user', function(err, results){
         if(err){
