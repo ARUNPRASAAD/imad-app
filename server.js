@@ -16,7 +16,7 @@ var config={
 
 var pool=new Pool(config);
 app('/user', function(req,res){
-  
+  res.send(arun);
     
     
     
